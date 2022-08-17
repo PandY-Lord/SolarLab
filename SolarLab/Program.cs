@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using SolarLab.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MyDbContext>(options =>
+{
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        new MySqlServerVersion("5.7")
+    );
+});
 
 var app = builder.Build();
 
