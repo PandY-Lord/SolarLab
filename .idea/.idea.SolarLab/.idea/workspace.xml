@@ -9,12 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9dfe74e-cf6e-4b28-831b-e3911a382666" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/MyDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SolarLab/Models/BirthdayPerson.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +30,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.SolarLab">
     <configuration name="SolarLab" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SolarLab/SolarLab.csproj" />
@@ -90,7 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1660592289804</updated>
       <workItem from="1660592306677" duration="1680000" />
-      <workItem from="1660762519959" duration="8097000" />
+      <workItem from="1660762519959" duration="9843000" />
+      <workItem from="1660936669336" duration="1059000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1660763049695</created>
@@ -106,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660763207717</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Подкрутил БД, настроил Миграции">
+      <created>1660775672416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660775672416</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +121,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="start" />
     <MESSAGE value="gitignore+" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore+" />
+    <MESSAGE value="Подкрутил БД, настроил Миграции" />
+    <option name="LAST_COMMIT_MESSAGE" value="Подкрутил БД, настроил Миграции" />
   </component>
 </project>
