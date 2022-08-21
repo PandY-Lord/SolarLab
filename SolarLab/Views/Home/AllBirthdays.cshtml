@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BirthdayPerson>
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Все дни рождения</h1>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Тырканка</th>
+            <th>ФИО</th>
+            <th>Дата рождения</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>
+                    <img class="rounded-circle" height="35" src="~/img/@(person.PhotoLink ?? "default.jpg")" alt="Костыль"/>
+                </td>
+                <td> @($"{person.Lastname} {person.Name} {person.Surname}")</td>
+                <td> @($"{person.BirthDate:dd/MM/yyyy}")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>

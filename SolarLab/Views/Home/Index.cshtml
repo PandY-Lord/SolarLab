@@ -1,8 +1,30 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<BirthdayPerson>
+
+@{
+    ViewData["Title"] = "Главная";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Ближайшие дни рождения</h1>
+
+    <table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Картныка</th>
+        <th>ФИО</th>
+        <th>Дата рождения</th>
+    </tr>
+    </thead>
+    <tbody class="text-center">
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td> <img class="rounded-circle" height="35" src="~/img/@(person.PhotoLink ?? "default.jpg")" alt="Костыль"/></td>
+            <td> @($"{person.Lastname} {person.Name} {person.Surname}")</td>
+            <td> @($"{person.BirthDate:dd/MM/yyyy}")</td>
+        </tr>
+    }
+        </tbody>
+        </table>
+
 </div>

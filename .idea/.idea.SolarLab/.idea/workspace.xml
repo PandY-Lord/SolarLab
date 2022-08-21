@@ -9,7 +9,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9dfe74e-cf6e-4b28-831b-e3911a382666" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/IPersonRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/PersonRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SolarLab/Views/Home/AllBirthdays.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Migrations/MyDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Models/BirthdayPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Models/BirthdayPerson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Views/Home/Privacy.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20b34b9a328994f3f3e215764dac6af1b2a66fdca278f58f1b4f3addcb29f4f/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595a578380fad7a0c4ade2cb256e4ff7233d9368473f9d35a898197d7762a0/DbContextOptions`.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -86,7 +98,9 @@
       <updated>1660592289804</updated>
       <workItem from="1660592306677" duration="1680000" />
       <workItem from="1660762519959" duration="9843000" />
-      <workItem from="1660936669336" duration="1059000" />
+      <workItem from="1660936669336" duration="7195000" />
+      <workItem from="1661024648984" duration="340000" />
+      <workItem from="1661073889384" duration="7126000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1660763049695</created>
@@ -109,7 +123,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660775672416</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Подкрутил БД/миграции">
+      <created>1660938043351</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660938043351</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавлены миграции">
+      <created>1660938222456</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660938222456</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +150,8 @@
     <MESSAGE value="start" />
     <MESSAGE value="gitignore+" />
     <MESSAGE value="Подкрутил БД, настроил Миграции" />
-    <option name="LAST_COMMIT_MESSAGE" value="Подкрутил БД, настроил Миграции" />
+    <MESSAGE value="Подкрутил БД/миграции" />
+    <MESSAGE value="Добавлены миграции" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены миграции" />
   </component>
 </project>

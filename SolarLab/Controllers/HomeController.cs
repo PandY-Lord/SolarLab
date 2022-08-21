@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using SolarLab.Infrastructure;
 using SolarLab.Models;
 
 namespace SolarLab.Controllers;
@@ -7,20 +8,23 @@ namespace SolarLab.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IPersonRepository _personRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+
+    public HomeController(ILogger<HomeController> logger, IPersonRepository personRepository)
     {
         _logger = logger;
+        _personRepository = personRepository;
     }
 
     public IActionResult Index()
     {
-        return View();
+        return View(_personRepository.GetFutureBirthdays());
     }
 
-    public IActionResult Privacy()
+    public IActionResult AllBirthdays()
     {
-        return View();
+        return View(_personRepository.GetAllBirthdays());
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
