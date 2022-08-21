@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SolarLab.Infrastructure;
+using SolarLab.Models;
+using SolarLab.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,7 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 });
 
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<BirthdayService>();
 
 var app = builder.Build();
 

@@ -21,4 +21,31 @@ public class PersonRepository : IPersonRepository
     {
         return _dbContext.BirthdayPersons.ToList();
     }
+
+    public BirthdayPerson GetBirthdayById(int id)
+    {
+        return _dbContext.BirthdayPersons.FirstOrDefault(x=>x.Id == id, new BirthdayPerson());
+    }
+
+    public void AddBirthday(BirthdayPerson birthdayPerson)
+    {
+        _dbContext.BirthdayPersons.Add(birthdayPerson);
+        _dbContext.SaveChanges();
+        
+    }
+    
+    public void EditBirthday(BirthdayPerson birthdayPerson)
+    {
+        if (_dbContext.BirthdayPersons.FirstOrDefault(x=>x.Id == birthdayPerson.Id) == null) return;
+        _dbContext.BirthdayPersons.Update(birthdayPerson);
+        _dbContext.SaveChanges();
+        
+    }
+    
+    public void DeleteBirthday(int id)
+    {
+        _dbContext.BirthdayPersons.Remove(new BirthdayPerson{Id = id});
+        _dbContext.SaveChanges();
+        
+    }
 }

@@ -1,0 +1,20 @@
+﻿@model BirthdayPerson
+
+@{
+    ViewData["Title"] = Model.Id == 0 ? "Добавить" : "Редактировать";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@(Model.Id==0?"Добавить день рождения":"Редактировать день рождения")</h1>
+
+    <form method="post" asp-action="@(Model.Id == 0 ? "AddBirthdayPost" : "EditBirthdayPost")" enctype="multipart/form-data">
+        <input name="Id" asp-for="Id" hidden="hidden">
+        <input type="text" name="Lastname" asp-for="Lastname">
+        <input type="text" name="Name" asp-for="Name">
+        <input type="text" name="Surname" asp-for="Surname">
+        <input type="date" name="BirthDate" asp-for="BirthDate">
+        <input type="file" name="PhotoLink" asp-for="PhotoLink">
+        <input type="submit" value="Отправить">
+    </form>
+   
+</div>

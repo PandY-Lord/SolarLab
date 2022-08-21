@@ -8,19 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9dfe74e-cf6e-4b28-831b-e3911a382666" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/IPersonRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/PersonRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SolarLab/Views/Home/AllBirthdays.cshtml" afterDir="false" />
+    <list default="true" id="d9dfe74e-cf6e-4b28-831b-e3911a382666" name="Changes" comment="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg">
+      <change afterPath="$PROJECT_DIR$/SolarLab/Models/AddBirthdayPersonViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SolarLab/Services/BirthdayService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SolarLab/Views/Home/AddEditBirthday.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarLab/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Migrations/MyDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Models/BirthdayPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Models/BirthdayPerson.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Infrastructure/IPersonRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/IPersonRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarLab/Infrastructure/PersonRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/PersonRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarLab/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Views/Home/Privacy.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +26,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/20b34b9a328994f3f3e215764dac6af1b2a66fdca278f58f1b4f3addcb29f4f/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595a578380fad7a0c4ade2cb256e4ff7233d9368473f9d35a898197d7762a0/DbContextOptions`.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PandY/RiderProjects/SolarLab/SolarLab/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PandY/RiderProjects/SolarLab/SolarLab/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,20 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.SolarLab">
     <configuration name="SolarLab" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SolarLab/SolarLab.csproj" />
@@ -100,7 +101,7 @@
       <workItem from="1660762519959" duration="9843000" />
       <workItem from="1660936669336" duration="7195000" />
       <workItem from="1661024648984" duration="340000" />
-      <workItem from="1661073889384" duration="7126000" />
+      <workItem from="1661073889384" duration="17657000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1660763049695</created>
@@ -137,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660938222456</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg">
+      <created>1661084016393</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661084016393</updated>
+    </task>
+    <task id="LOCAL-00007" summary="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg">
+      <created>1661084533001</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661084533001</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +160,17 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="start" />
@@ -152,6 +178,30 @@
     <MESSAGE value="Подкрутил БД, настроил Миграции" />
     <MESSAGE value="Подкрутил БД/миграции" />
     <MESSAGE value="Добавлены миграции" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлены миграции" />
+    <MESSAGE value="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SolarLab/Services/BirthdayService.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\PandY\RiderProjects\SolarLab\SolarLab\Services\BirthdayService.cs" initialLine="30" containingFunctionPresentation="method 'AddBirthday'">
+            <startOffsets>
+              <option value="966" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1296" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
