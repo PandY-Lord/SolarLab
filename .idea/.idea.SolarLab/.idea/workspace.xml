@@ -8,16 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9dfe74e-cf6e-4b28-831b-e3911a382666" name="Changes" comment="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg">
-      <change afterPath="$PROJECT_DIR$/SolarLab/Models/AddBirthdayPersonViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SolarLab/Services/BirthdayService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SolarLab/Views/Home/AddEditBirthday.cshtml" afterDir="false" />
+    <list default="true" id="d9dfe74e-cf6e-4b28-831b-e3911a382666" name="Changes" comment="1. Добавлено добавление&#10;2. Добавлено удаление&#10;&#10;Асинхронные методы - смерть.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SolarLab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarLab/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Infrastructure/IPersonRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/IPersonRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Infrastructure/PersonRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Infrastructure/PersonRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SolarLab/SolarLab.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +22,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/595a578380fad7a0c4ade2cb256e4ff7233d9368473f9d35a898197d7762a0/DbContextOptions`.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/PandY/RiderProjects/SolarLab/SolarLab/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/PandY/RiderProjects/SolarLab/SolarLab/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
@@ -101,7 +95,7 @@
       <workItem from="1660762519959" duration="9843000" />
       <workItem from="1660936669336" duration="7195000" />
       <workItem from="1661024648984" duration="340000" />
-      <workItem from="1661073889384" duration="17657000" />
+      <workItem from="1661073889384" duration="19145000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1660763049695</created>
@@ -152,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661084533001</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1. Добавлено добавление&#10;2. Добавлено удаление&#10;&#10;Асинхронные методы - смерть.">
+      <created>1661101458686</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661101458686</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,26 +180,8 @@
     <MESSAGE value="Подкрутил БД/миграции" />
     <MESSAGE value="Добавлены миграции" />
     <MESSAGE value="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Добавлена страница со список ближайших ДР за месяц&#10;2. Добавлена страница со списком всех ДР&#10;&#10;Загуглена инфомрация по Эчпочмакам: https://static.1000.menu/img/content-v2/1f/8a/1603/echpochmak_1598951601_20_max.jpg" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SolarLab/Services/BirthdayService.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\PandY\RiderProjects\SolarLab\SolarLab\Services\BirthdayService.cs" initialLine="30" containingFunctionPresentation="method 'AddBirthday'">
-            <startOffsets>
-              <option value="966" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1296" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="1. Добавлено добавление&#10;2. Добавлено удаление&#10;&#10;Асинхронные методы - смерть." />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Добавлено добавление&#10;2. Добавлено удаление&#10;&#10;Асинхронные методы - смерть." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

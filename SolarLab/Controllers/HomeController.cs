@@ -42,9 +42,9 @@ public class HomeController : Controller
         return RedirectToAction("AllBirthdays");
     }
     
-    public IActionResult DeleteBirthday()
+    public IActionResult DeleteBirthday( int id)
     {
-        return View();
+        return _birthdayService.
     }
     
     public IActionResult EditBirthday(int id)
