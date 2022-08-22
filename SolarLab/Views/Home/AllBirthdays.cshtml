@@ -13,6 +13,7 @@
             <th>Тырканка</th>
             <th>ФИО</th>
             <th>Дата рождения</th>
+            <th></th>
         </tr>
         </thead>
         <tbody class="text-center">
@@ -24,6 +25,13 @@
                 </td>
                 <td> @($"{person.Lastname} {person.Name} {person.Surname}")</td>
                 <td> @($"{person.BirthDate:dd/MM/yyyy}")</td>
+                <td>
+                    <form method="get">
+                        <input hidden="hidden" value="@person.Id" name="id">
+                        <input type="submit" value="X" formaction="@Url.Action("DeleteBirthday")">
+                        <input type="submit" value="V" formaction="@Url.Action("EditBirthday")">
+                    </form>
+                </td>
             </tr>
         }
         </tbody>

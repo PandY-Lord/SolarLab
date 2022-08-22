@@ -16,7 +16,7 @@ public class BirthdayService
 
     public async Task AddBirthday(AddBirthdayPersonViewModel birthdayPerson)
     {
-        
+
         if (birthdayPerson.PhotoLink != null)
         {
             // путь к папке Files
@@ -36,6 +36,35 @@ public class BirthdayService
             Lastname = birthdayPerson.Lastname,
             PhotoLink = birthdayPerson.PhotoLink?.FileName ?? "default.jpg"
         });
+    }
+
+    public void DeleteBirthday(int id)
+    {
+        _personRepository.DeleteBirthday(id);
+    }
+
+    public async Task EditBirthday(EditBirthdayPersonViewModel editBirthdayPersonViewModel)
+    {
+        if (editBirthdayPersonViewModel.PhotoLink != null)
+        {
+            // путь к папке Files
+            string path = "/img/" + editBirthdayPersonViewModel.PhotoLink.FileName;
+            // сохраняем файл в папку Files в каталоге wwwroot
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await editBirthdayPersonViewModel.PhotoLink.CopyToAsync(fileStream);
+            }
+        }
+
+        var birthday = _personRepository.GetBirthdayById(editBirthdayPersonViewModel.Id);
+        if (birthday == null) return;
+        birthday.Name = editBirthdayPersonViewModel.Name;
+        birthday.PhotoLink = editBirthdayPersonViewModel.PhotoLink?.FileName ?? "default.jpg";
+        birthday.Surname = editBirthdayPersonViewModel.Surname;
+        birthday.Lastname = editBirthdayPersonViewModel.Lastname;
+        birthday.BirthDate = editBirthdayPersonViewModel.BirthDate;
+        
+        _personRepository.SaveChanges();
     }
 }
 

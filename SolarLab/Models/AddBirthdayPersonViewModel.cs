@@ -8,3 +8,4 @@ public class AddBirthdayPersonViewModel
     public string Surname { get; set; }
     public string Lastname { get; set; }
 }
+

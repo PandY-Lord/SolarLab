@@ -14,5 +14,7 @@ public interface IPersonRepository
     void EditBirthday(BirthdayPerson birthdayPerson);
 
     void DeleteBirthday(int id);
+
+    void SaveChanges();
 }
 

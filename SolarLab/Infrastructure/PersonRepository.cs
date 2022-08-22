@@ -24,7 +24,7 @@ public class PersonRepository : IPersonRepository
 
     public BirthdayPerson GetBirthdayById(int id)
     {
-        return _dbContext.BirthdayPersons.FirstOrDefault(x=>x.Id == id, new BirthdayPerson());
+        return _dbContext.BirthdayPersons.FirstOrDefault(x=>x.Id == id) ?? throw new KeyNotFoundException();
     }
 
     public void AddBirthday(BirthdayPerson birthdayPerson)
@@ -44,8 +44,13 @@ public class PersonRepository : IPersonRepository
     
     public void DeleteBirthday(int id)
     {
-        _dbContext.BirthdayPersons.Remove(new BirthdayPerson{Id = id});
+        _dbContext.BirthdayPersons.Remove(GetBirthdayById(id));
         _dbContext.SaveChanges();
         
+    }
+
+    public void SaveChanges()
+    {
+        _dbContext.SaveChanges();
     }
 }

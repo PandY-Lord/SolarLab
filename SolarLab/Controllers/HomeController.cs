@@ -42,14 +42,26 @@ public class HomeController : Controller
         return RedirectToAction("AllBirthdays");
     }
     
+    [HttpGet]
     public IActionResult DeleteBirthday( int id)
     {
-        return _birthdayService.
+        _birthdayService.DeleteBirthday(id);
+        return RedirectToAction("AllBirthdays");
     }
     
+    [HttpGet]
     public IActionResult EditBirthday(int id)
     {
-        return View("AddEditBirthday");
+        var birthday = _personRepository.GetBirthdayById(id);
+        return View("AddEditBirthday", birthday);
+        
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> EditBirthdayPost(EditBirthdayPersonViewModel editBirthdayPersonViewModel)
+    {
+        await _birthdayService.EditBirthday(editBirthdayPersonViewModel);
+        return RedirectToAction("AllBirthdays");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
