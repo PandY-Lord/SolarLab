@@ -5,15 +5,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Все дни рождения</h1>
+    <h4 style="text-align: left; color: #146c43" >Все дни рождения</h4>
 
     <table class="table table-hover">
         <thead>
         <tr>
-            <th>Тырканка</th>
+            <th>Портрет</th>
             <th>ФИО</th>
             <th>Дата рождения</th>
-            <th></th>
+            <th>Функция</th>
         </tr>
         </thead>
         <tbody class="text-center">
@@ -28,8 +28,8 @@
                 <td>
                     <form method="get">
                         <input hidden="hidden" value="@person.Id" name="id">
-                        <input type="submit" value="X" formaction="@Url.Action("DeleteBirthday")">
-                        <input type="submit" value="V" formaction="@Url.Action("EditBirthday")">
+                        <input type="submit" class="btn-outline-warning" value="Удалить" formaction="@Url.Action("DeleteBirthday")">
+                        <input type="submit" class="btn-outline-danger" value="Изменить" formaction="@Url.Action("EditBirthday")">
                     </form>
                 </td>
             </tr>

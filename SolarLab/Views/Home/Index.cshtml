@@ -5,26 +5,26 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Ближайшие дни рождения</h1>
+    <h5 style="text-align: left; color: #146c43">Ближайшие дни рождения</h5>
 
     <table class="table table-hover">
-    <thead>
-    <tr>
-        <th>Картныка</th>
-        <th>ФИО</th>
-        <th>Дата рождения</th>
-    </tr>
-    </thead>
-    <tbody class="text-center">
-    @foreach (var person in Model)
-    {
+        <thead>
         <tr>
-            <td> <img class="rounded-circle" height="35" src="~/img/@(person.PhotoLink ?? "default.jpg")" alt="Костыль"/></td>
-            <td> @($"{person.Lastname} {person.Name} {person.Surname}")</td>
-            <td> @($"{person.BirthDate:dd/MM/yyyy}")</td>
+            <th>Картинка</th>
+            <th>ФИО</th>
+            <th>Дата рождения</th>
         </tr>
-    }
+        </thead>
+        <tbody class="text-center">
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td> <img class="rounded-circle" height="35" src="~/img/@(person.PhotoLink ?? "default.jpg")" alt="Костыль"/></td>
+                <td> @($"{person.Lastname} {person.Name} {person.Surname}")</td>
+                <td> @($"{person.BirthDate:dd/MM/yyyy}")</td>
+            </tr>
+        }
         </tbody>
-        </table>
+    </table>
 
 </div>
